@@ -1,13 +1,15 @@
 package main
 
 import (
-	
+	"math/rand"
+	"time"
+
 	"github.com/force4760/quotedopai/cmd"
 )
 
 func main() {
 
-    
-    cmd.Execute()
-	
+	rand.Seed(time.Now().UnixNano())
+	cmd.Execute()
+
 }

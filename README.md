@@ -52,16 +52,12 @@ A Command Line Interface (CLI) version of @guilhermebaos's quotedopai, that give
 |--------------|------------|-----------|-----------|--------|-------------------------------|
 | Quote        | -q         | --quote   |           | Output | Show a quote                  |
 | Copy         | -c         | --copy    |           | Output | Copy a quote                  |
-| Image        | -i         | --image   | size      | Output | sizeXsize image with a quote  |
 | Print        | -p         | --print   |           | Output | Print a quote                 |
 | Not          | -n         | --not     | word      | Filter | Not containing word           |
 | With         | -w         | --with    | word      | Filter | Containing word               |
 | And          | -a         | --and     | w1, w2    | Filter | Containing w1 && w2           |
 | Or           | -o         | --or      | w1, w2    | Filter | Containing w1 \|\| w2         |
 | Exclusive Or | -x         | --xor     | w1, w2    | Filter | Containing w1 ^ w2            |
-
-## Contributing
-If you have had the pleasure of having "O Pai" as a professor, please message me with any quotes you have containing his ancient wisdom that will allow us to have good grades on his exams (learning experiences I mean...).
 
 ## Socials
 

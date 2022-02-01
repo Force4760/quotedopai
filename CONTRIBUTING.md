@@ -32,6 +32,10 @@ quotedopai could always use more documentation, whether as part of the
 official quotedopai docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
+### Send Quotes 
+
+If you have had the pleasure of having "O Pai" as a professor, please message me with any quotes you have containing his ancient wisdom that will allow us to have good grades on his exams (learning experiences I mean...).
+
 ### Submit Feedback
 
 The best way to send feedback is to file an issue at https://github.com/force4760/quotedopai/issues.
