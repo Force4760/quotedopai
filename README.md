@@ -5,65 +5,55 @@ A Command Line Interface (CLI) version of @guilhermebaos's quotedopai, that give
 ## Tech Stack
 * Languages: Golang
 * Libraries:
-	* Cobra:
-	* Vyper:
-	* Logrus:
-	* Flinch:
+	* Cobra: Used to create the CLI
+	* HasGo: Functional programming in Go inspired by Haskell
 * Tools:
 	* Git
-	* JSON
 	* Make
+	* CookieCutter
 
 ## CLI
-### Output Methods
 
-* `-q` or `--quote`:
-	* Shows a random quote
+### Commands
 
-* `-c` or `--copy`:
-	* Copies a random quote to your clipboard
-
-* `-i` or `--image`:
-	* Creates an Instagram ready image containing a random quote
-
-* `-p` or `--print`:
-	* Prints a random quote to your terminal
-
-### Filtering Methods
-
-* `-n [word]` or `--not [word]`:
+* `not [word]`
 	* Filter for a quote not containing the provided word
 
-* `-w [word]` or `--with [word]`:
+* `with [word]`:
 	* Filter for a quote containing the provided word
 
-* `-a [word1] [word2]` or `--and [word1] [word2]`:
+* `and [word1] [word2]`:
 	* Filter for a quote containing `word1 && word2`
 
-* `-o [word1] [word2]` or `--or [word1] [word2]`:
+* `or [word1] [word2]`:
 	* Filter for a quote containing `word1 || word2`
 
-* `-x [word1] [word2]` or `--xor [word1] [word2]`:
+* `xor [word1] [word2]`:
 	* Filter for a quote containing `word1 ^ word2`
 
 ### Methods Table
 
-| Name         | Short Flag | Long Flag | Arguments | Type   | Explanation                   |
-|--------------|------------|-----------|-----------|--------|-------------------------------|
-| Quote        | -q         | --quote   |           | Output | Show a quote                  |
-| Copy         | -c         | --copy    |           | Output | Copy a quote                  |
-| Print        | -p         | --print   |           | Output | Print a quote                 |
-| Not          | -n         | --not     | word      | Filter | Not containing word           |
-| With         | -w         | --with    | word      | Filter | Containing word               |
-| And          | -a         | --and     | w1, w2    | Filter | Containing w1 && w2           |
-| Or           | -o         | --or      | w1, w2    | Filter | Containing w1 \|\| w2         |
-| Exclusive Or | -x         | --xor     | w1, w2    | Filter | Containing w1 ^ w2            |
+| Name         | Command | Short Flag | Long Flag | Type   | Explanation                   |
+|--------------|---------|------------|-----------|--------|-------------------------------|
+| Quote        |   ---   | -q         | --quote   | Output | Show a quote    [Quote]       |
+| Copy         |   ---   | -c         | --copy    | Output | Copy a quote                  |
+| Image        |   ---   | -i         | --image   | Output | Get an insta ready image      |
+|              |         |            |           |        |                               |
+| Not          | not     |    ----    |    ---    | Filter | `Not` containing `word`       |
+| With         | with    |    ----    |    ---    | Filter | Containing `word`             |
+| And          | and     |    ----    |    ---    | Filter | Containing `w1 && w2`         |
+| Or           | or      |    ----    |    ---    | Filter | Containing `w1 \|\| w2`       |
+| Exclusive Or | xor     |    ----    |    ---    | Filter | Containing `w1 ^ w2`          |
+|              |         |            |           |        |                               |
+| Form         | form    |    ----    |    ---    | Other  | Open a quote suggestion form  |
+| Version      | version |    ----    |    ---    | Other  | Version information           |
+| Help         | help    |    ----    |    ---    | Other  | Show help and command info    |
 
 ## Socials
 
 ## Getting started
 
-This project requires Go to be installed. On OS X with Homebrew you can just run `brew install go`.
+This project requires Go to be installed.
 
 Running it then should be as simple as:
 
