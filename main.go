@@ -4,14 +4,11 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/force4760/quotedopai/src/imageMaker"
-	//"github.com/force4760/quotedopai/cmd"
+	"github.com/force4760/quotedopai/cmd"
 )
 
 func main() {
 
 	rand.Seed(time.Now().UnixNano())
-	//cmd.Execute()
-
-	imageMaker.MakeImage("a")
+	cmd.Execute()
 }

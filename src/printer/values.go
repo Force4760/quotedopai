@@ -16,3 +16,4 @@ func ColorVersion() {
 
 var ErrorMsg = Colorize("Sorry, couldn't find a valid quote!", RED)
 var ThanksMsg = Colorize("Thank you for contributing", GREEN)
+var ImageMsg = Colorize("Image created", GREEN)

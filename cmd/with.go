@@ -5,8 +5,12 @@ import (
 
 	"github.com/spf13/cobra"
 
+	"github.com/force4760/quotedopai/src/imageMaker"
 	"github.com/force4760/quotedopai/src/quotes"
 )
+
+// Flags
+var isWithImage bool = false
 
 // withCmd represents the with command
 var withCmd = &cobra.Command{
@@ -19,11 +23,17 @@ var withCmd = &cobra.Command{
 
 		quote := quotes.QuotesDoPai.WordIn(word)
 
-		fmt.Println(string(quote))
+		if isWithImage {
+			imageMaker.MakeImage(string(quote))
+		} else {
+			fmt.Println(string(quote))
+		}
 
 	},
 }
 
 func init() {
 	rootCmd.AddCommand(withCmd)
+
+	withCmd.Flags().BoolVarP(&isWithImage, "image", "i", false, "If the quote should be exported as an image")
 }

@@ -1,9 +1,14 @@
 package imageMaker
 
-import "github.com/fogleman/gg"
+import (
+	"fmt"
+
+	"github.com/fogleman/gg"
+	"github.com/force4760/quotedopai/src/printer"
+)
 
 const FontSize = 70
-const FontPath = "./font.ttf"
+const FontPath = "./assets/font.ttf"
 const Width = 1000
 const ShadeAlpha = 0.6
 
@@ -20,4 +25,6 @@ func MakeImage(quote string) {
 	drawQuote(dc, quote, Width)
 
 	dc.SavePNG("quote.png")
+
+	fmt.Println(printer.ImageMsg)
 }
