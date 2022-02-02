@@ -7,24 +7,8 @@ import (
 	"github.com/fogleman/gg"
 )
 
-func MakeImage() {
-	const w = 1000
-	dc := gg.NewContext(w, w)
-	dc.Translate(w/2, w/2)
-
-	colors, bg := makeAllColors()
-	background(dc, bg, w)
-
-	drawAllPlanets(dc, colors, bg)
-	foregroundShadow(dc, w)
-
-	drawQuote(dc, "É bastante improvável ir num avião com uma bomba. É por isso que eu levo sempre uma bomba comigo, porque ir num avião com duas bombas é ainda mais improvável.", w)
-
-	dc.SavePNG("out.png")
-}
-
 func drawQuote(dc *gg.Context, quote string, w float64) {
-	err := dc.LoadFontFace("./font.ttf", 70)
+	err := dc.LoadFontFace(FontPath, FontSize)
 	if err != nil {
 		panic(err)
 	}
@@ -78,7 +62,7 @@ func background(dc *gg.Context, bg Color, w float64) {
 func foregroundShadow(dc *gg.Context, w float64) {
 	// Draw a background by drawing a rectangle over the canvas
 	dc.DrawRectangle(-w/2, -w/2, w, w)
-	dc.SetRGBA(0, 0, 0, 0.3)
+	dc.SetRGBA(0, 0, 0, ShadeAlpha)
 	dc.Fill()
 }
 

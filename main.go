@@ -13,5 +13,5 @@ func main() {
 	rand.Seed(time.Now().UnixNano())
 	//cmd.Execute()
 
-	imageMaker.MakeImage()
+	imageMaker.MakeImage("a")
 }
