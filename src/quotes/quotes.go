@@ -1,18 +1,20 @@
 package quotes
 
-import "math/rand"
+import (
+	"math/rand"
+
+	"github.com/force4760/quotedopai/src/printer"
+)
 
 // go:generate hasgo -T=Quote -S=Quotes
 type Quotes []Quote
-
-const NoQuoteString = "Sorry, couldn't find a valid quote!"
 
 func (qs Quotes) Random() Quote {
 	length := len(qs)
 
 	// can't choose from an empty quote list
 	if length == 0 {
-		return NoQuoteString
+		return Quote(printer.ErrorMsg)
 	}
 
 	// get a random index

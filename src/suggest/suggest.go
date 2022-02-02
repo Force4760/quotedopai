@@ -5,12 +5,15 @@ import (
 	"log"
 	"os/exec"
 	"runtime"
+
+	"github.com/force4760/quotedopai/src/printer"
 )
 
 const formURL = "https://forms.gle/UuoruSKGJpiMkqam8"
 
 func OpenURL() {
 	openbrowser(formURL)
+	fmt.Println(printer.ThanksMsg)
 }
 
 func openbrowser(url string) {

@@ -16,8 +16,6 @@ limitations under the License.
 package cmd
 
 import (
-	"fmt"
-
 	"github.com/force4760/quotedopai/src/suggest"
 	"github.com/spf13/cobra"
 )
@@ -29,7 +27,6 @@ var formCmd = &cobra.Command{
 	Long:  `Open, in your default browser, a google form for suggesting a new Quote`,
 	Run: func(cmd *cobra.Command, args []string) {
 		suggest.OpenURL()
-		fmt.Println("Thank you for contributing")
 	},
 }
 
