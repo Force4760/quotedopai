@@ -27,7 +27,8 @@ build:
 	@echo "building ${BIN_NAME} ${VERSION}"
 	@echo "GOPATH=${GOPATH}"
 	go build -ldflags "-X github.com/force4760/quotedopai/version.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X github.com/force4760/quotedopai/version.BuildDate=${BUILD_DATE}" -o bin/${BIN_NAME}
-
+	GOOS=windows GOARCH=amd64 go build -o bin/quotedopai.exe
+	
 get-deps:
 	dep ensure
 
