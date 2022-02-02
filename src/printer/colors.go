@@ -44,6 +44,3 @@ func ColorizeWord(s string, word string, c Color) string {
 
 	return replaced
 }
-
-var ErrorMsg = Colorize("Sorry, couldn't find a valid quote!", RED)
-var ThanksMsg = Colorize("Thank you for contributing", GREEN)

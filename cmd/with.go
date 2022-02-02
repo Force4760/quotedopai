@@ -3,8 +3,9 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/force4760/quotedopai/src/quotes"
 	"github.com/spf13/cobra"
+
+	"github.com/force4760/quotedopai/src/quotes"
 )
 
 // withCmd represents the with command
