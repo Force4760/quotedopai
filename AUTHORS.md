@@ -6,4 +6,5 @@
 
 ## Contributors
 
-None yet. Why not be the first?
+- Guilherme BAOS [guilhermebaos](https://github.com/guilhermebaos)
+    - Thank you for making the original version of the app
