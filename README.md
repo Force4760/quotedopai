@@ -35,8 +35,6 @@ A Command Line Interface (CLI) version of @guilhermebaos's quotedopai, that give
 
 | Name         | Command | Short Flag | Long Flag | Type   | Explanation                   |
 |--------------|---------|------------|-----------|--------|-------------------------------|
-| Quote        |   ---   | -q         | --quote   | Output | Show a quote    [Quote]       |
-| Copy         |   ---   | -c         | --copy    | Output | Copy a quote                  |
 | Image        |   ---   | -i         | --image   | Output | Get an insta ready image      |
 |              |         |            |           |        |                               |
 | Not          | not     |    ----    |    ---    | Filter | `Not` containing `word`       |
@@ -48,20 +46,3 @@ A Command Line Interface (CLI) version of @guilhermebaos's quotedopai, that give
 | Form         | form    |    ----    |    ---    | Other  | Open a quote suggestion form  |
 | Version      | version |    ----    |    ---    | Other  | Version information           |
 | Help         | help    |    ----    |    ---    | Other  | Show help and command info    |
-
-## Socials
-
-## Getting started
-
-This project requires Go to be installed.
-
-Running it then should be as simple as:
-
-```console
-$ make
-$ ./bin/quotedopai
-```
-
-### Testing
-
-``make test``
